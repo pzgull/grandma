@@ -2,7 +2,9 @@
 
 def grandma(input)
     output = nil
-    if input.empty?
+    if input == "GOODBYE!"
+	output = "LEAVING SO SOON?"
+    elsif input.empty?
        output = "WHAT?!"
     elsif input != input.upcase
        output = "SPEAK UP, KID!"
@@ -26,5 +28,13 @@ prompt = "> "
 until bye == 2 do
     print prompt
     answer = gets.chomp
-    puts grandma(answer)
+    if answer == "GOODBYE!"
+	if bye == 0
+	    puts grandma(answer)
+	end
+	bye += 1
+    else
+    	puts grandma(answer)
+    end
 end
+puts "LATER, SKATER!"
