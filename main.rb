@@ -4,6 +4,8 @@ def grandma(input)
     output = nil
     if input.empty?
        output = "WHAT?!"
+    elsif input != input.upcase
+       output = "SPEAK UP, KID!"
     end
     return output
 end
