@@ -6,6 +6,12 @@ def grandma(input)
        output = "WHAT?!"
     elsif input != input.upcase
        output = "SPEAK UP, KID!"
+    elsif input == input.upcase
+        if input.upcase == input.downcase
+            output = "STOP CURSING!"
+        else
+            output = "NO, NOT SINCE 1946!"
+        end
     end
     return output
 end
